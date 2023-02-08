@@ -1,0 +1,21 @@
+.message {
+    width: 90%;
+    padding: 0.5em;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.message-header {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.message-header > h3 {
+    margin-right: 0.5em;
+}
+
+.message-header > p {
+    color: gray;
+}

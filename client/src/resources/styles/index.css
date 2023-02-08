@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rowdies:wght@300;400;700&display=swap");
+
+:root {
+    --cornflower: #8093f1;
+}
+
+body,
+header,
+nav,
+div,
+h1,
+h2,
+h3,
+p,
+a,
+i,
+img,
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    user-select: none;
+}
+
+h1,
+h2 {
+    font-family: "Rowdies", cursive;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2em;
+}
+
+h3,
+p,
+a,
+i {
+    font-family: "Jost", sans-serif;
+}
+
+p,
+a {
+    font-size: 1.2em;
+}
+
+ul {
+    list-style: none;
+}

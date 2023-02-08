@@ -1,0 +1,6 @@
+.channel-view {
+    width: 83%;
+
+    display: flex;
+    flex-flow: column nowrap;
+}

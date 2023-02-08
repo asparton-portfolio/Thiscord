@@ -1,0 +1,61 @@
+@keyframes channel-nav-btn-hover {
+    from {
+        color: white;
+    }
+    to {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+@keyframes channel-nav-btn-unhover {
+    from {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    to {
+        color: white;
+    }
+}
+
+.channel-nav-btn {
+    width: 90%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 5px;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    animation-name: channel-nav-btn-unhover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.channel-nav-btn:hover {
+    animation-name: channel-nav-btn-hover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.channel-nav-btn > div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.channel-nav-btn > div > h3 {
+    margin-left: 0.5em;
+}
+
+.channel {
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.channel:hover {
+    color: var(--cornflower);
+}

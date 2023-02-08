@@ -1,0 +1,11 @@
+.navbar {
+    width: 17%;
+    border: 0;
+    background-color: var(--cornflower);
+
+    color: white;
+}
+
+.nav-section {
+    margin-bottom: 1.5em;
+}

@@ -1,0 +1,9 @@
+.edit-btn-container {
+    padding: 0.5em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit-btn-container:hover {
+    background-color: rgba(245, 245, 245, 0.539);
+}

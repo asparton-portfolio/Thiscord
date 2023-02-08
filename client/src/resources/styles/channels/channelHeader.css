@@ -1,0 +1,19 @@
+.channel-header {
+    padding: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid gainsboro;
+    height: 15vh;
+}
+
+.channel-header > div {
+    margin-top: 0.25em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.channel-header > div > p {
+    margin-top: 0.05em;
+    margin-left: 0.25em;
+}

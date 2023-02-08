@@ -1,0 +1,58 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Message {
+  id            Int      @id @default(autoincrement())
+  sender_id     Int
+  recipient_id  Int?
+  channel_id    Int?
+  content       String   @db.LongText
+  date          DateTime @default(now()) @db.DateTime(0)
+  Channel       Channel? @relation(fields: [channel_id], references: [id], onDelete: Cascade, map: "fk_message_channel")
+  recipient     User?    @relation("Message_recipient_idToUser", fields: [recipient_id], references: [id], onDelete: Cascade, map: "fk_message_recipient")
+  sender        User     @relation("Message_sender_idToUser", fields: [sender_id], references: [id], onDelete: Cascade, map: "fk_message_sender")
+
+  @@index([channel_id], map: "fk_message_channel_idx")
+  @@index([recipient_id], map: "fk_message_recipient_idx")
+  @@index([sender_id], map: "fk_message_sender_idx")
+}
+
+model Channel {
+  id       Int             @id @default(autoincrement())
+  name     String          @unique(map: "name_UNIQUE") @db.VarChar(45)
+  owner_id Int
+  owner    User            @relation(fields: [owner_id], references: [id], onDelete: Cascade, map: "fk_channel_owner")
+  members  ChannelMember[]
+  messages Message[]
+
+  @@index([owner_id], map: "fk_channel_owner_idx")
+  @@fulltext([name])
+}
+
+model User {
+  id                                 Int             @id @default(autoincrement())
+  username                           String          @unique(map: "username_UNIQUE") @db.VarChar(45)
+  password                           String          @db.VarChar(64)
+  nickname                           String          @db.VarChar(45)
+  Channel                            Channel[]
+  ChannelMember                      ChannelMember[]
+  Message_Message_recipient_idToUser Message[]       @relation("Message_recipient_idToUser")
+  Message_Message_sender_idToUser    Message[]       @relation("Message_sender_idToUser")
+}
+
+model ChannelMember {
+  channel_id Int
+  user_id    Int
+  channel    Channel @relation(fields: [channel_id], references: [id], onDelete: Cascade, map: "fk_channel_member_channel")
+  user       User    @relation(fields: [user_id], references: [id], onDelete: Cascade, map: "fk_channel_member_user")
+
+  @@id([channel_id, user_id])
+  @@index([user_id], map: "fk_channel_member_user_idx")
+}

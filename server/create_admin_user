@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+mysql --user="root" --password --database="thiscord" --execute='INSERT INTO User (`nickname`, `password`) VALUES ("Thiscord", "bla bla bla je suis admin oui");'

@@ -1,0 +1,13 @@
+.user-new-mp {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 8px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.user-new-mp:hover {
+    background-color: rgba(220, 220, 220, 0.514);
+}

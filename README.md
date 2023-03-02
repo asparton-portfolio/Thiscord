@@ -24,3 +24,23 @@ The Node.js back-end server is based on a few tools:
 The React front-end also uses extra tools:
 - Socket.io: to send and receive real-time events from the back-end server
 - [Mantine](https://mantine.dev/): which provides beautiful and easy to use React components
+
+## Here are some screenshots of the app 😁:
+
+<img src="https://media.discordapp.net/attachments/808748311574085653/1080937614485508096/mp.png" alt="private message chat page" />
+<div>
+  <img src="https://media.discordapp.net/attachments/808748311574085653/1080937612568703116/register_page.png" alt="register page" width="500" />
+  <img src="https://media.discordapp.net/attachments/808748311574085653/1080937614208675840/login_invalid.png" alt="login page" width="500" />
+</div>
+<div>
+  <img src="https://media.discordapp.net/attachments/808748311574085653/1080937613785038918/first_channel.png" alt="first channel page" width="500" />
+  <img src="https://media.discordapp.net/attachments/808748311574085653/1080937613986385940/join_channel.png" alt="join channel page" width="500" />
+</div>
+<div>
+  <img src="https://media.discordapp.net/attachments/808748311574085653/1080937613252382760/channel_chat.png" alt="channel chat page" width="500" />
+  <img src="https://media.discordapp.net/attachments/808748311574085653/1080937612921012354/change_channel_name.png" alt="channel name page" width="500" />
+</div>
+<div>
+  <img src="https://media.discordapp.net/attachments/808748311574085653/1080937613520810014/edit_nickname.png" alt="edit nickname page" width="500" />
+  <img src="https://media.discordapp.net/attachments/808748311574085653/1080937615068495872/new_mp.png" alt="new private message page" width="500" />
+</div>
